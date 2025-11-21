@@ -1,8 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import PaymentMethod from './pages/PaymentMethod'
+import Payment from './pages/Payment'
+
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/method" element={<PaymentMethod />} />
+        <Route path="/pay" element={<Payment />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
