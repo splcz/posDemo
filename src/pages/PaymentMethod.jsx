@@ -55,8 +55,7 @@ function PaymentMethod() {
       } else if (selectedMethod === 'phantom') {
         // Phantom: https://phantom.app/ul/browse/ + encodeURIComponent(https://cryptopaymentdemobyjacksonlau.vercel.app?amount=xxx)
         const targetUrl = `${baseUrl}?amount=${amount}`
-        const metamaskUrl = `https://link.metamask.io/dapp/${targetUrl}`
-        paylink = `https://phantom.app/ul/browse/${encodeURIComponent(metamaskUrl)}`
+        paylink = `https://phantom.app/ul/browse/${encodeURIComponent(targetUrl)}`
       }
       
       navigate('/pay', { 
